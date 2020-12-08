@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import { connect } from "react-redux";
 import { fetchProducts } from "../reducers/products/products.actions";
+import { addToCart } from "../reducers/cart/cart.action";
 
 class Products extends Component {
 
@@ -105,4 +106,5 @@ class Products extends Component {
 
 export default connect((state) => ({ products: state.products.filteredItems }), {
     fetchProducts,
+    addToCart,
 })(Products);
